@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GCDSimple" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="hn7-ip-Vmp">
+                                <rect key="frame" x="0.0" y="84" width="414" height="216"/>
+                                <locale key="locale" localeIdentifier="ka_GE"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OUr-hZ-2E4">
+                                <rect key="frame" x="106" y="364" width="204" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Calculate Prime Numbers"/>
+                                <connections>
+                                    <action selector="calculatePrimeNumbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gBI-qn-CBA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9P-5j-TUf">
+                                <rect key="frame" x="20" y="489" width="374" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="W9P-5j-TUf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8Mi-0D-4oX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OUr-hZ-2E4" secondAttribute="trailing" constant="104" id="Auw-kW-bF0"/>
+                            <constraint firstItem="OUr-hZ-2E4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="106" id="Oho-gd-16I"/>
+                            <constraint firstItem="OUr-hZ-2E4" firstAttribute="top" secondItem="hn7-ip-Vmp" secondAttribute="bottom" constant="64" id="dUj-B1-gcR"/>
+                            <constraint firstItem="hn7-ip-Vmp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dsb-7M-5Fq"/>
+                            <constraint firstItem="hn7-ip-Vmp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="kb0-VN-X2j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W9P-5j-TUf" secondAttribute="trailing" constant="20" id="lNp-4c-wH8"/>
+                            <constraint firstItem="hn7-ip-Vmp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tqD-PY-C96"/>
+                            <constraint firstItem="W9P-5j-TUf" firstAttribute="top" secondItem="OUr-hZ-2E4" secondAttribute="bottom" constant="91" id="znm-EK-RSH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="numberLabel" destination="W9P-5j-TUf" id="USL-1z-sbr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
